@@ -19,10 +19,10 @@ import {
   Alert,
   Chip,
 } from '@mui/material';
-import { categoryAPI } from '../../services/api';
-import type { Category } from '../../types/index';
-import { LoadingWrapper } from '../../components/common/LoadingWrapper';
-import { ConfirmDialog } from '../../components/common/ConfirmDialog';
+import { categoryAPI } from '../services/api';
+import type { Category } from '../types/index';
+import { LoadingWrapper } from '../components/common/LoadingWrapper';
+import { ConfirmDialog } from '../components/common/ConfirmDialog';
 
 export const CategoriesPage: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);

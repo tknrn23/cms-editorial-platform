@@ -12,11 +12,11 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
-import { dashboardAPI, notificationAPI } from '../../services/api';
-import type { DashboardStats } from '../../types/index';
-import { LoadingWrapper } from '../../components/common/LoadingWrapper';
-import { StatusBadge } from '../../components/common/StatusBadge';
-import { CategoryBadges } from '../../components/common/CategoryBadges';
+import { dashboardAPI, notificationAPI } from '../services/api';
+import type { DashboardStats } from '../types/index';
+import { LoadingWrapper } from '../components/common/LoadingWrapper';
+import { StatusBadge } from '../components/common/StatusBadge';
+import { CategoryBadges } from '../components/common/CategoryBadges';
 
 const COLORS = ['#3B82F6', '#EC4899', '#F59E0B', '#10B981', '#EF4444', '#8B5CF6'];
 

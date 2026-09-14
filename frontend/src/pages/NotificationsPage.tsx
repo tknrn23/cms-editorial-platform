@@ -22,9 +22,9 @@ import {
   Card,
   CardContent,
 } from '@mui/material';
-import { notificationAPI, articleAPI } from '../../services/api';
-import type { EmailNotification, Article } from '../../types/index';
-import { LoadingWrapper } from '../../components/common/LoadingWrapper';
+import { notificationAPI, articleAPI } from '../services/api';
+import type { EmailNotification, Article } from '../types/index';
+import { LoadingWrapper } from '../components/common/LoadingWrapper';
 
 export const NotificationsPage: React.FC = () => {
   const [notifications, setNotifications] = useState<EmailNotification[]>([]);

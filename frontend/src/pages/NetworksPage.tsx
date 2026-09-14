@@ -18,10 +18,10 @@ import {
   Box,
   Alert,
 } from '@mui/material';
-import { networkAPI } from '../../services/api';
-import type { Network } from '../../types/index';
-import { LoadingWrapper } from '../../components/common/LoadingWrapper';
-import { ConfirmDialog } from '../../components/common/ConfirmDialog';
+import { networkAPI } from '../services/api';
+import type { Network } from '../types/index';
+import { LoadingWrapper } from '../components/common/LoadingWrapper';
+import { ConfirmDialog } from '../components/common/ConfirmDialog';
 
 export const NetworksPage: React.FC = () => {
   const [networks, setNetworks] = useState<Network[]>([]);

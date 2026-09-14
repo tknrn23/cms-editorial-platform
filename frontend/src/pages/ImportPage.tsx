@@ -19,8 +19,8 @@ import {
   Chip,
   Stack,
 } from '@mui/material';
-import { importAPI } from '../../services/api';
-import { LoadingWrapper } from '../../components/common/LoadingWrapper';
+import { importAPI } from '../services/api';
+import { LoadingWrapper } from '../components/common/LoadingWrapper';
 
 interface ImportResult {
   success: number;

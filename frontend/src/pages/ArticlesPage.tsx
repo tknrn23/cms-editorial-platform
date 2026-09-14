@@ -25,13 +25,13 @@ import {
   CircularProgress,
   Alert,
 } from '@mui/material';
-import { articleAPI, categoryAPI, networkAPI } from '../../services/api';
-import { useAppStore } from '../../store/appStore';
-import type { Article, Category, Network } from '../../types/index';
-import { StatusBadge } from '../../components/common/StatusBadge';
-import { CategoryBadges } from '../../components/common/CategoryBadges';
-import { LoadingWrapper } from '../../components/common/LoadingWrapper';
-import { ConfirmDialog } from '../../components/common/ConfirmDialog';
+import { articleAPI, categoryAPI, networkAPI } from '../services/api';
+import { useAppStore } from '../store/appStore';
+import type { Article, Category, Network } from '../types/index';
+import { StatusBadge } from '../components/common/StatusBadge';
+import { CategoryBadges } from '../components/common/CategoryBadges';
+import { LoadingWrapper } from '../components/common/LoadingWrapper';
+import { ConfirmDialog } from '../components/common/ConfirmDialog';
 
 export const ArticlesPage: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]);
