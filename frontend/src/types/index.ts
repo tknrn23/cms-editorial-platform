@@ -1,1 +1,78 @@
-export interface Article {\n  id: string;\n  title: string;\n  content: string;\n  excerpt: string;\n  author: string;\n  categories: string[];\n  network: string;\n  status: 'draft' | 'published' | 'archived';\n  featured: boolean;\n  publishedAt: Date | null;\n  createdAt: Date;\n  updatedAt: Date;\n}\n\nexport interface Category {\n  id: string;\n  name: string;\n  slug: string;\n  description: string;\n  color: string;\n  createdAt: Date;\n}\n\nexport interface Network {\n  id: string;\n  name: string;\n  description: string;\n  createdAt: Date;\n}\n\nexport interface EmailNotification {\n  id: string;\n  articleId: string;\n  recipients: string[];\n  subject: string;\n  htmlContent: string;\n  sentAt: Date;\n  status: 'sent' | 'failed';\n}\n\nexport interface PaginatedResponse<T> {\n  data: T[];\n  total: number;\n  page: number;\n  limit: number;\n  totalPages: number;\n}\n\nexport interface DashboardStats {\n  articles: {\n    total: number;\n    published: number;\n    draft: number;\n    archived: number;\n    featured: number;\n  };\n  networks: { total: number };\n  categories: { total: number };\n  notifications: {\n    total: number;\n    sent: number;\n    failed: number;\n  };\n  latestArticles: Article[];\n  latestNotifications: EmailNotification[];\n  articlesByCategory: { id: string; name: string; count: number }[];\n  articlesByNetwork: { id: string; name: string; count: number }[];\n}\n\nexport interface ArticleFilters {\n  page?: number;\n  limit?: number;\n  search?: string;\n  status?: 'draft' | 'published' | 'archived';\n  network?: string;\n  featured?: boolean;\n}\n
+export interface Article {
+  id: string;
+  title: string;
+  content: string;
+  excerpt: string;
+  author: string;
+  categories: string[];
+  network: string;
+  status: 'draft' | 'published' | 'archived';
+  featured: boolean;
+  publishedAt: Date | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  color: string;
+  createdAt: Date;
+}
+
+export interface Network {
+  id: string;
+  name: string;
+  description: string;
+  createdAt: Date;
+}
+
+export interface EmailNotification {
+  id: string;
+  articleId: string;
+  recipients: string[];
+  subject: string;
+  htmlContent: string;
+  sentAt: Date;
+  status: 'sent' | 'failed';
+}
+
+export interface PaginatedResponse<T> {
+  data: T[];
+  total: number;
+  page: number;
+  limit: number;
+  totalPages: number;
+}
+
+export interface DashboardStats {
+  articles: {
+    total: number;
+    published: number;
+    draft: number;
+    archived: number;
+    featured: number;
+  };
+  networks: { total: number };
+  categories: { total: number };
+  notifications: {
+    total: number;
+    sent: number;
+    failed: number;
+  };
+  latestArticles: Article[];
+  latestNotifications: EmailNotification[];
+  articlesByCategory: { id: string; name: string; count: number }[];
+  articlesByNetwork: { id: string; name: string; count: number }[];
+}
+
+export interface ArticleFilters {
+  page?: number;
+  limit?: number;
+  search?: string;
+  status?: 'draft' | 'published' | 'archived';
+  network?: string;
+  featured?: boolean;
+}
